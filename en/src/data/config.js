@@ -3,5 +3,5 @@ export const config = {
     "github_repo": "https://github.com/observexio/observex",
     "community_addr": "https://github.com/observexio/observex/discussions",
     "app_name": "ObserveX",
-    "slogan": "Most powerful data visulization platform for Observability and APM",
+    "slogan": "Observe anything you want in your business and never miss any X factors",
 }
