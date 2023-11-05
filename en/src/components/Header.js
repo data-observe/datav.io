@@ -105,7 +105,7 @@ export function NavPopover({ display = 'md:hidden', className, ...props }) {
             <NavItems />
             <li>
               <a
-                href="https://github.com/data-observe/datav"
+                href="https://github.com/observexio/observex"
                 className="hover:text-sky-500 dark:hover:text-sky-400"
               >
                 GitHub
@@ -143,7 +143,7 @@ export function NavItems() {
         </Link>
       </li> */}
       <li>
-        <Link href="http://play.datav.io" className="hover:text-sky-500 dark:hover:text-sky-400">
+        <Link href="http://play.observex.io" className="hover:text-sky-500 dark:hover:text-sky-400">
           Demo
         </Link>
       </li>
@@ -267,10 +267,10 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                   <LangSwitcher />
                   <ThemeToggle panelClassName="mt-8" />
                   <a
-                    href="https://github.com/data-observe/datav"
+                    href="https://github.com/observexio/observex"
                     className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
                   >
-                    <span className="sr-only">Datav on GitHub</span>
+                    <span className="sr-only">ObserveX on GitHub</span>
                     <svg
                       viewBox="0 0 16 16"
                       className="w-5 h-5"

@@ -6,7 +6,7 @@ description:
 import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 
-Datav 中的每个用户都有自己的角色，而角色则决定了用户的权限。目前有三种角色：
+ObserveX 中的每个用户都有自己的角色，而角色则决定了用户的权限。目前有三种角色：
 
 <TextList>
     <li> 超级管理员 Super admin </li>
@@ -30,11 +30,11 @@ Datav 中的每个用户都有自己的角色，而角色则决定了用户的�
     <li>使用者 Viewer: 可以查看团队信息、仪表盘，还能使用团队的导航栏 </li>
 </TextList>
 
-事实上， Datav 根本就没有传统意义上的用户角色，只有团队角色，只是为了方便管理，我们把 `global` 团队的用户和角色抽象出来，形成了 `Datav` 的用户和角色。
+事实上， ObserveX 根本就没有传统意义上的用户角色，只有团队角色，只是为了方便管理，我们把 `global` 团队的用户和角色抽象出来，形成了 `ObserveX` 的用户和角色。
 
 ## global 团队
 
-如上所述，`Datav` 中的用户和角色其实就是 `global` 团队的用户和角色。
+如上所述，`ObserveX` 中的用户和角色其实就是 `global` 团队的用户和角色。
 
 <img src={require('@/img/docs/admin/user-roles.jpg').default.src} alt="user-roles"  className="rounded-lg ring-1 ring-black/5"  style={{height: '260px'}}/>
 
@@ -46,15 +46,15 @@ Datav 中的每个用户都有自己的角色，而角色则决定了用户的�
 <img src={require('@/img/docs/admin/global-roles.jpg').default.src} alt="global-roles"  className="rounded-lg ring-1 ring-black/5"  style={{height: '260px'}}/>
 
 
-可以看到，`global` 团队中的用户和角色和 `Datav` 中的用户和角色是一样的，只是没有 `Super admin`，因为 `Super admin` 是写死在代码中的。
+可以看到，`global` 团队中的用户和角色和 `ObserveX` 中的用户和角色是一样的，只是没有 `Super admin`，因为 `Super admin` 是写死在代码中的。
 
-另外有趣的是，我们甚至没有把 `datav-admin` 添加到 `global` 团队中: 当添加一个用户到 Datav 时，`global` team 会自动添加这个用户和相同的角色。
+另外有趣的是，我们甚至没有把 `observex-admin` 添加到 `global` 团队中: 当添加一个用户到 ObserveX 时，`global` team 会自动添加这个用户和相同的角色。
 
-总之，**在 Datav 中，用户其实是添加到 `global` 团队的，当你为一个用户设置角色时，你其实是在设置他在 `global` 团队中的角色，反之亦然**。
+总之，**在 ObserveX 中，用户其实是添加到 `global` 团队的，当你为一个用户设置角色时，你其实是在设置他在 `global` 团队中的角色，反之亦然**。
 
 ## 管理员角色
 
-`Admin` 角色可以在 `Datav` 中做很多事情，因此我们建议你使用 `Admin` 角色来管理 `Datav`。
+`Admin` 角色可以在 `ObserveX` 中做很多事情，因此我们建议你使用 `Admin` 角色来管理 `ObserveX`。
 
 关于 `Admin` 角色，有一些你需要知道的事情：
 

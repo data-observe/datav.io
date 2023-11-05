@@ -7,19 +7,19 @@ import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 import { TipGood, TipBad } from '@/components/Tip'
 
-在 Grafana 中，所有的数据都是 `DataFrame` 格式， 相对应的 Datav 格式是 `SeriesData` 。 
+在 Grafana 中，所有的数据都是 `DataFrame` 格式， 相对应的 ObserveX 格式是 `SeriesData` 。 
 
-`DataFrame` 和 `SeriesData` 在格式上几乎一致，但是与 Grafana 不同的是， Datav 并没有试图去把所有数据格式都统一为 `SeriesData`， 而是不同的图表有不同的数据格式，例如：
+`DataFrame` 和 `SeriesData` 在格式上几乎一致，但是与 Grafana 不同的是， ObserveX 并没有试图去把所有数据格式都统一为 `SeriesData`， 而是不同的图表有不同的数据格式，例如：
 
 <TextList>
-    <li>时间序列数据统一用 <Code>SeriesData</Code>  格式, 这也是 Datav 中使用最广的，大部分图表类型都是这个数据格式，例如 Graph, Table, Stats, Gauge等.</li>
+    <li>时间序列数据统一用 <Code>SeriesData</Code>  格式, 这也是 ObserveX 中使用最广的，大部分图表类型都是这个数据格式，例如 Graph, Table, Stats, Gauge等.</li>
     <li>NodeGraph 数据格式, 用于展示依赖关系图，包含 nodes 和 edges 信息 </li>
     <li>Trace 数据格式, 用于链路数据，原生支持 Jaeger</li>
 </TextList>
 
 这些不同的数据格式之间并不兼容，如果非要用一个统一的数据格式来表示它们，那么这个数据格式将会变得难以理解和使用。所以我们使用不同的数据格式来表示不同的图表。
 
-对于大部分用户来说，并不需要关心数据格式。因为这些数据格式是在数据源读取到后，自动转换为图表所需的格式。但如果你想用 HTTP 数据源去某个 HTTP API 查询数据，那就要知道使用的图表所需的数据格式。毕竟外部获取的数据格式，肯定不能直接用于 Datav 的。
+对于大部分用户来说，并不需要关心数据格式。因为这些数据格式是在数据源读取到后，自动转换为图表所需的格式。但如果你想用 HTTP 数据源去某个 HTTP API 查询数据，那就要知道使用的图表所需的数据格式。毕竟外部获取的数据格式，肯定不能直接用于 ObserveX 的。
 
 但是我们不会详细介绍每个数据格式的细节，而是告诉大家在需要时，该如何找到这种数据格式。
 
@@ -119,7 +119,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 
 {/* ## SeriesData 数据格式
 
-上面就是 `Graph` 图表需要的数据格式，而这也是 Datav 中使用最广的 `SeriesData` 格式，与之相对应的是 Grafana 中的 DataFram，它们都是时间序列数据格式。
+上面就是 `Graph` 图表需要的数据格式，而这也是 ObserveX 中使用最广的 `SeriesData` 格式，与之相对应的是 Grafana 中的 DataFram，它们都是时间序列数据格式。
 
 ## 图表数据格式 
 
@@ -135,7 +135,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 
 上面的列表中，有两个数据对象组成，分别是 `dataOfQueryA` 和 `dataOfQueryB`，它们分别由图表中定义的查询语句 A 和 B 查询而来。
 
-<img src="https://github.com/data-observe/assets/blob/main/panel/panel-query.jpg?raw=true" />
+<img src="https://github.com/observexio/assets/blob/main/panel/panel-query.jpg?raw=true" />
 
 在上图中，你可以清晰看到该图表有两条查询语句，每一条查询语句都可以查询到一个结果，然后插入到最终的结果列表中。实际上，你可以在一个图表中添加任意多个查询语句，但是我们不推荐这么做，因为这会让图表变得比想象的更复杂。
 
@@ -381,7 +381,7 @@ const response = {
 
 有时候，从数据源查询到的数据并不符合图表的要求，还有时候，我们需要对数据做一些变换，例如合并变换，这时候就需要对数据进行转换。
 
-因此，我们需要一个方法来对查询到的数据进行修改编辑，为此 Datav 提供了一个通用的数据转换功能。
+因此，我们需要一个方法来对查询到的数据进行修改编辑，为此 ObserveX 提供了一个通用的数据转换功能。
 
 下面来看一个例子，我们要将数据中的时间戳字段转换为时间字符串，这样在 Table 中就能看到更友好的时间格式。
 
@@ -441,7 +441,7 @@ Table 图表使用的是 `SeriesData` 时间序列数据格式，这里我们对
 
 ## 总结：非常重要的最终数据格式
 
-最终数据格式在 Datav 中非常重要，无论是你要对现有的数据进行变换，还是对外部查询来的不兼容数据进行转换，最终目标都是要实现最终数据格式。
+最终数据格式在 ObserveX 中非常重要，无论是你要对现有的数据进行变换，还是对外部查询来的不兼容数据进行转换，最终目标都是要实现最终数据格式。
 
 如果想知道某个图表类型的最终数据格式也很简单：使用 TestData 作为数据源并选择你需要的图表类型，然后打开 `Panel Debug -> Panel Data` ，其中的数据格式就是最终数据格式。
 
@@ -473,12 +473,12 @@ Table 图表使用的是 `SeriesData` 时间序列数据格式，这里我们对
 
 HTTP 数据源查询到的结果有两种可能性：
 
-1. 查询到的结果格式不为 Datav 支持，此时需要在 `变换` 标签页中，将其转换为最终数据格式。
+1. 查询到的结果格式不为 ObserveX 支持，此时需要在 `变换` 标签页中，将其转换为最终数据格式。
 2. 查询到的结果格式跟最终数据格式列表中元素格式一致，此时不需要进行变换。
 
-但如果是第二种，可以肯定的是，该接口是专门为 Datav 开发的数据查询接口，那么问题来了：**如果我要为 Datav 开发原生数据查询接口，到底应该返回什么格式？**
+但如果是第二种，可以肯定的是，该接口是专门为 ObserveX 开发的数据查询接口，那么问题来了：**如果我要为 ObserveX 开发原生数据查询接口，到底应该返回什么格式？**
 
-### 为 Datav 实现原生数据查询接口
+### 为 ObserveX 实现原生数据查询接口
 
 首先可以肯定，接口返回的数据格式要跟最终数据格式中的元素格式保持一致。
 

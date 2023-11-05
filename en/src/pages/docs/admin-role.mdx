@@ -6,9 +6,9 @@ description:
 import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 
-Every user in Datav is assinged a role. The role determines what the user can do. 
+Every user in ObserveX is assinged a role. The role determines what the user can do. 
 
-There are currenly 3 roles in Datav: 
+There are currenly 3 roles in ObserveX: 
 
 <TextList>
     <li> Super admin </li>
@@ -18,10 +18,10 @@ There are currenly 3 roles in Datav:
 
 ## Super admin 
 
-Among these roles, super admin is very special: only `admin` user is `Super admin` role, it's hard coded in Datav, 
+Among these roles, super admin is very special: only `admin` user is `Super admin` role, it's hard coded in ObserveX, 
 therefor you cant chagne the username and role of `admin` user.
 
-`Super admin` has all the permissions in Datav, including manage `Admin` users and teams.
+`Super admin` has all the permissions in ObserveX, including manage `Admin` users and teams.
 
 ## Team role 
 
@@ -33,11 +33,11 @@ There are 2 team roles:
     <li> Viewer: view team info, dashboards and use team sidebar </li>
 </TextList>
 
-Here is an intresting thing: in fact, there are no user roles in Datav, only team roles. Let's see how it works.
+Here is an intresting thing: in fact, there are no user roles in ObserveX, only team roles. Let's see how it works.
 
-## Datav and global team
+## ObserveX and global team
 
-For some reasons, user roles in Datav are just roles in `global` team.
+For some reasons, user roles in ObserveX are just roles in `global` team.
 
 <img src={require('@/img/docs/admin/user-roles.jpg').default.src} alt="user-roles"  className="rounded-lg ring-1 ring-black/5"  style={{height: '260px'}}/>
 
@@ -49,13 +49,13 @@ Let's check the global team :
 
 They are almost the same, except that there is no `Super admin` in `global` team, because `Super admin` is only assigned to `admin` user, it is hard coded.
 
-By the way, we even have not added `datav-admin` to `global` team, when we add this user and assigned `Admin` role to him, he is actually added to `global` team with the same role.
+By the way, we even have not added `observex-admin` to `global` team, when we add this user and assigned `Admin` role to him, he is actually added to `global` team with the same role.
 
-In a word, **every user you add in Datav is actually added to `gloal` team, when you set role for a user, you are just set his role in `global` team, and vice versa**.
+In a word, **every user you add in ObserveX is actually added to `gloal` team, when you set role for a user, you are just set his role in `global` team, and vice versa**.
 
 ## Admin role
 
-Admin role can do many things in `Datav`, therefore we recommand you to manage `Datav` using `Admin` role user.
+Admin role can do many things in `ObserveX`, therefore we recommand you to manage `ObserveX` using `Admin` role user.
 
 There is something you need to know about Admin role:
 

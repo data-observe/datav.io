@@ -6,11 +6,11 @@ description:
 import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 
-You can't configure alerts rules in Datav, because we believe: leave professional work to professional people. 
+You can't configure alerts rules in ObserveX, because we believe: leave professional work to professional people. 
 
 In you use Prometheus, you can create alerts rules in Prometheus, if you have your own APM services, you can create alerts in these systems. 
 
-Datav is mainly focus on Alert dispaly. There are two ways to display alerts in Datav:
+ObserveX is mainly focus on Alert dispaly. There are two ways to display alerts in ObserveX:
 
 <TextList>
     <li>Viewing alerts in alert page</li>
@@ -21,7 +21,7 @@ They have different use cases, let's talk about them one by one.
 
 ## Alert dashboard 
 
-There are two special dashboards predefined in Datav, they have their own special ids.
+There are two special dashboards predefined in ObserveX, they have their own special ids.
 
 <TextList>
     <li>Home dashboard with id `d-home`</li>
@@ -34,13 +34,13 @@ You can visit alert dashboard by clicking the alert icon in sidebar, or visit <C
 
 Now let's assume you are already in alert dashboard page, you will see a list of alerts in this page.
 
-Maybe you would wonder: why there are so many alerts here? I didn't create any alerts in Datav. The answer is simple: the alerts you see are all from TestData datasource.
+Maybe you would wonder: why there are so many alerts here? I didn't create any alerts in ObserveX. The answer is simple: the alerts you see are all from TestData datasource.
 
 ### Add alerts rules in Prometheus 
 
 TestData is useful, but they are also useless. To make it usefull, we should query the real alerts.
 
-Because Prometheus is the core datasource of Datav, we will use it here to show how to add alerts to Datav.
+Because Prometheus is the core datasource of ObserveX, we will use it here to show how to add alerts to ObserveX.
 
 First, let's create some alert rules in Promtheus.
 
@@ -78,12 +78,12 @@ groups:
 
 You can see our alert rule has no sense: when value of <Code>go_gc_duration_seconds_count</Code> is larger than `20` and last for `2` minutes, promtheus will throw out an alert.
 
-Why we said it is no sense is because this is a `Counter` metrics, it will surely be larger than 20 in a short time after you start `Prometheus` server which will ensurely trigger the alert rules, therefore we can easily view the alerts in Datav.
+Why we said it is no sense is because this is a `Counter` metrics, it will surely be larger than 20 in a short time after you start `Prometheus` server which will ensurely trigger the alert rules, therefore we can easily view the alerts in ObserveX.
 
 
-After configuration, start Prometheus server and go back to our Datav ui.
+After configuration, start Prometheus server and go back to our ObserveX ui.
 
-> For more information, please visit [Prometheus website](https://prometheus.io/docs/alerting/latest/overview/), Datav does not dependent on Prometheus, we just query alerts from it, how the alerts is configured and fired, it is all the 
+> For more information, please visit [Prometheus website](https://prometheus.io/docs/alerting/latest/overview/), ObserveX does not dependent on Prometheus, we just query alerts from it, how the alerts is configured and fired, it is all the 
 > responsibility of Prometheus
 
 ### Query alerts from prometheus 

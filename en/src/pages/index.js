@@ -90,7 +90,7 @@ function Header() {
                   href={config.github_repo}
                   className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
                 >
-                  <span className="sr-only">Datav on GitHub</span>
+                  <span className="sr-only">ObserveX on GitHub</span>
                   <svg
                     viewBox="0 0 16 16"
                     className="w-5 h-5"

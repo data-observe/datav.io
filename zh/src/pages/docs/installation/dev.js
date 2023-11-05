@@ -12,14 +12,14 @@ let steps = [
            我们的后端服务器使用 Go 语言开发，因此你需要先安装 <Link href="https://go.dev/dl/">Go 语言</Link>的环境.
         </p>
         <p>
-           然后在 `DatavRoot/query` 目录下运行右边的命令.
+           然后在 `ObserveXRoot/query` 目录下运行右边的命令.
         </p>
       </>
     ),
     code: {
-      name: 'DatavRoot/query',
+      name: 'ObserveXRoot/query',
       lang: 'terminal',
-      code: `go build -o datav`,
+      code: `go build -o observex`,
     },
   },
   {
@@ -27,7 +27,7 @@ let steps = [
     body: () => (
       <>
         <p>
-          在 `DatavRoot/query` 目录下, 运行上一步编译出的二进制可执行文件 `datav`。
+          在 `ObserveXRoot/query` 目录下, 运行上一步编译出的二进制可执行文件 `observex`。
         </p>
         <p>
           你可以看到如右边的输出，这意味着我们的后端服务已经成功启动。
@@ -35,17 +35,17 @@ let steps = [
       </>
     ),
     code: {
-      name: 'DatavRoot/query',
+      name: 'ObserveXRoot/query',
       lang: 'terminal',
-      code: `./datav --config config.yaml
-INFO[08-22|13:40:25] Datav is listening on address            address=:10086`,
+      code: `./observex --config config.yaml
+INFO[08-22|13:40:25] ObserveX is listening on address            address=:10086`,
     },
   },
   {
     title: '构建前端 UI',
     body: () => (
       <p>
-        打开一个新的终端窗口，进入 `DatavRoot/ui` 目录, 然后运行右边的命令来安装依赖。
+        打开一个新的终端窗口，进入 `ObserveXRoot/ui` 目录, 然后运行右边的命令来安装依赖。
       </p>
     ),
     code: {
@@ -74,9 +74,9 @@ export default function Index({ code }) {
         id="content-wrapper"
         className="relative z-10 max-w-3xl mb-16 prose prose-slate dark:prose-dark"
       >
-        <h3 className="sr-only">Installing Datav</h3>
+        <h3 className="sr-only">Installing ObserveX</h3>
         <p>
-          从源码构建和运行 Datav 非常简单，首先下载 `release` 版本的源码 <Link href="https://github.com/data-observe/datav/releases">Github</Link>.
+          从源码构建和运行 ObserveX 非常简单，首先下载 `release` 版本的源码 <Link href="https://github.com/observexio/observex/releases">Github</Link>.
         </p>
       </div>
       <Steps level={4} steps={steps} code={code} />

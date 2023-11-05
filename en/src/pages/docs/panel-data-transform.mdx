@@ -7,7 +7,7 @@ import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 import { TipGood, TipBad } from '@/components/Tip'
 
-In grafana, all data is in `Dataframe` formats, but in Datav, the data passed to panel for rendering has various formats, such as 
+In grafana, all data is in `Dataframe` formats, but in ObserveX, the data passed to panel for rendering has various formats, such as 
 
 <TextList>
     <li>Timeseries data( <Code>SeriesData</Code> ) format, this is the most common format for timeseries data, used in many panels, such as Graph, Gauge, Table, Stats etc.</li>
@@ -135,7 +135,7 @@ The panel data looks like this:
 
 The above data is consist of two queries: query A and query B, each of them will get data from  datasource independently, and push the result into panel data list.
 
-<img src="https://github.com/data-observe/assets/blob/main/panel/panel-query.jpg?raw=true" />
+<img src="https://github.com/observexio/assets/blob/main/panel/panel-query.jpg?raw=true" />
 
 In above image, you can clearly see what's the two queries look like. In fact, you can add as many queries as you like to a panel, but we don't recommand, it will make the panel more complex than you would think.
 
@@ -291,7 +291,7 @@ No matter how the data is transformed, it must be compatible with the `final dat
 
 Sometimes, the data queried from datasource does not meet the requirements of the chart, so we need to transform the query result to the format that the chart requires.
 
-For this reason, we need a method to modify the data queried from the datasource , and Datav has provided a common data transformation function for us to do this.
+For this reason, we need a method to modify the data queried from the datasource , and ObserveX has provided a common data transformation function for us to do this.
 
 Let's take a look at an example: We need to convert the timestamp field in the data to a time string, so that we can see a more friendly time format in the Table.
 
@@ -355,7 +355,7 @@ After doing this, the `Time` column of Table should show time string instead of 
 
 ## Conclusion: Final data format is very important
 
-The final data format is very important in Datav, no matter whether you want to transform the existing data or convert the incompatible data that query from an external HTTP API, the ultimate goal is to achieve the final data format.
+The final data format is very important in ObserveX, no matter whether you want to transform the existing data or convert the incompatible data that query from an external HTTP API, the ultimate goal is to achieve the final data format.
 
 If you want to know the final data format of a chart type, it's also very simple: use TestData as datasource and select the chart type you need, then open `Panel Debug -> Panel Data`, the data format you see  is the final data format.
 
@@ -385,12 +385,12 @@ If you are using HTTP datasource to query data from external HTTP API, then **ea
 
 There are two possibilities for the results queried by HTTP datasource:
 
-1. The format of the result is not supported by Datav, in this case, you need to transform it to the final data format in the `Transform` tab.
+1. The format of the result is not supported by ObserveX, in this case, you need to transform it to the final data format in the `Transform` tab.
 2. The format of the result is the same as the element format in the final data format list, in this case, you don't need to transform it.
 
-But if it is the second case, one thing is certain: the HTTP API is specially developed for Datav, so the question is: **what format should I return if I want to develop a native data query API for Datav?**
+But if it is the second case, one thing is certain: the HTTP API is specially developed for ObserveX, so the question is: **what format should I return if I want to develop a native data query API for ObserveX?**
 
-### Implement native data query API for Datav
+### Implement native data query API for ObserveX
 
 First of all, the format of the result returned by the HTTP API must be consistent with the element format in the final data format list.
 

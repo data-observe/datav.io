@@ -1,7 +1,7 @@
 export const config = {
-    "play_addr": "https://play.datav.io",
-    "github_repo": "https://github.com/data-observe/datav",
-    "community_addr": "https://github.com/data-observe/datav/discussions",
-    "app_name": "Datav",
+    "play_addr": "https://play.observex.io",
+    "github_repo": "https://github.com/observexio/observex",
+    "community_addr": "https://github.com/observexio/observex/discussions",
+    "app_name": "ObserveX",
     "slogan": "Most powerful data visulization platform for Observability and APM",
 }

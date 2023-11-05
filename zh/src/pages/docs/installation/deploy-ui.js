@@ -12,7 +12,7 @@ let steps = [
                 <p>
                     由于现在 UI 和 API server 分离部署了，因此我们的 UI 文件必须要配置要访问的 API server 地址.
                 </p>
-                <p>由于我们的 API 服务器运行在 <Code> http://10.7.10.10 </Code> 上，你可以配置 UI 访问的地址为该 IP ，也可以是一个指向该 IP 的域名，例如 `https://api.datav.io`</p>
+                <p>由于我们的 API 服务器运行在 <Code> http://10.7.10.10 </Code> 上，你可以配置 UI 访问的地址为该 IP ，也可以是一个指向该 IP 的域名，例如 `https://api.observex.io`</p>
 
                 <p>
                     在 `ui` 文件夹下找到 `.env` 文件，修改内容为:
@@ -49,13 +49,13 @@ let steps = [
                     该文件夹下有三个 `.zip` 压缩文件，选择你需要的进行解压，下面我们以 linux 为例来进行解压，解压后你将看到如下文件:
                 </p>
                 <p>
-                    1. <Code>datav</Code>: Go语言编译出的二进制文件，用于启动 Datav server( API server ).
+                    1. <Code>observex</Code>: Go语言编译出的二进制文件，用于启动 ObserveX server( API server ).
                 </p>
                 <p>
-                    2. <Code>datav.yaml</Code>: Datav server 需要的配置文件
+                    2. <Code>observex.yaml</Code>: ObserveX server 需要的配置文件
                 </p>
                 <p>
-                    3. <Code>datav.sql</Code>: Mysql 数据库需要的 sql 文件
+                    3. <Code>observex.sql</Code>: Mysql 数据库需要的 sql 文件
                 </p>
                 <p>
                     4. <Code>ui directory</Code>: UI 静态资源文件，你可以将其部署在 Nginx 或 Github 上
@@ -66,23 +66,23 @@ let steps = [
             name: 'SourceCodeRoot/release/linux',
             lang: 'terminal',
             code: `linux % ls
-datav		datav.sql	datav.yaml	ui`,
+observex		observex.sql	observex.yaml	ui`,
         },
     },
     {
-        title: '部署 Datav api server',
+        title: '部署 ObserveX api server',
         body: () => (
             <>
                 <p>
-                    拷贝 `datav` 二进制文件和 `datav.yaml` 到服务器 `10.7.10.10` 上, 按照右边的配置修改 `datav.yaml` 并启动服务: `./datav --config datav.yaml`
+                    拷贝 `observex` 二进制文件和 `observex.yaml` 到服务器 `10.7.10.10` 上, 按照右边的配置修改 `observex.yaml` 并启动服务: `./observex --config observex.yaml`
                 </p>
             </>
         ),
         code: {
-            name: '10.7.10.10/datav.yaml',
+            name: '10.7.10.10/observex.yaml',
             lang: 'terminal',
             code: `server:
-    ## datav server address
+    ## observex server address
     addr: "10.7.10.10:80"`
         },
     },
@@ -108,18 +108,18 @@ export default function Index({ code }) {
                 id="content-wrapper"
                 className="relative z-10 max-w-3xl mb-16 prose prose-slate dark:prose-dark"
             >
-                <h3 className="sr-only">Installing Datav</h3>
+                <h3 className="sr-only">Installing ObserveX</h3>
                 <p>
                     在本节中，我们将在不同的服务器上部署 UI 静态资源和 API server。
                 </p>
                 <p>
-                事实上 `https://play.datav.io` 就是分离部署的：UI 静态文件部署在 <Link href="https://github.com/data-observe/play.datav.io">Github page</Link> 上，API server 部署在云服务器，其中 `play.datav.io` 指向 Github page, `api.datav.io` 指向 API server。
-                    当用户从 `play.datav.io` 访问 UI 时，会先从 Github page 上下载静态资源文件，然后这些文件会请求 `api.datav.io` 获取数据。
+                事实上 `https://play.observex.io` 就是分离部署的：UI 静态文件部署在 <Link href="https://github.com/observexio/play.observex.io">Github page</Link> 上，API server 部署在云服务器，其中 `play.observex.io` 指向 Github page, `api.observex.io` 指向 API server。
+                    当用户从 `play.observex.io` 访问 UI 时，会先从 Github page 上下载静态资源文件，然后这些文件会请求 `api.observex.io` 获取数据。
                 </p>
                 <p>
-                    首先，需要从 <Link href="https://github.com/data-observe/datav/releases">Github</Link> 上下载 Datav 的<strong>源代码( source code)</strong>，注意，不是 zip 安装包。然后准备两台服务器用于部署 Datav:
+                    首先，需要从 <Link href="https://github.com/observexio/observex/releases">Github</Link> 上下载 ObserveX 的<strong>源代码( source code)</strong>，注意，不是 zip 安装包。然后准备两台服务器用于部署 ObserveX:
                 </p>
-                <p>1. <strong>10.7.10.10</strong> 上部署 datav server 也就是 api server</p>
+                <p>1. <strong>10.7.10.10</strong> 上部署 observex server 也就是 api server</p>
                 <p>2. <strong>10.7.10.11</strong> 上部署 UI 静态资源( 通过 nginx 提供)</p>
             </div>
             <Steps level={4} steps={steps} code={code} />
