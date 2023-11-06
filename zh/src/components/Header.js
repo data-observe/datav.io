@@ -105,7 +105,7 @@ export function NavPopover({ display = 'md:hidden', className, ...props }) {
             <NavItems />
             <li>
               <a
-                href="https://github.com/xobserveio/xobserve"
+                href="https://github.com/xobserve/xobserve"
                 className="hover:text-sky-500 dark:hover:text-sky-400"
               >
                 GitHub
@@ -267,7 +267,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                   <LangSwitcher />
                   <ThemeToggle panelClassName="mt-8" />
                   <a
-                    href="https://github.com/xobserveio/xobserve"
+                    href="https://github.com/xobserve/xobserve"
                     className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
                   >
                     <span className="sr-only">xObserve on GitHub</span>

@@ -46,7 +46,7 @@ export default function Index({ code }) {
       >
         <h3 className="sr-only"></h3>
         <p>
-          xObserve provides pre-built binary and UI static files for every release, you can download them in  <Link href="https://github.com/xobserveio/xobserve/releases">Github</Link>.
+          xObserve provides pre-built binary and UI static files for every release, you can download them in  <Link href="https://github.com/xobserve/xobserve/releases">Github</Link>.
         </p>
         <p>
           Pre-built binary files are very convenient for users to use, but they are not suitable for developers to develop and debug. If you want to develop xObserve, you need to build the source code yourself.

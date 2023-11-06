@@ -15,7 +15,7 @@ git config user.email "cto@188.com"
 git add .
 git commit -m 'deploy'
 git branch -M main
-git remote add origin https://github.com/xobserveio/xobserve.io.git
+git remote add origin https://github.com/xobserve/xobserve.io.git
 
 ## push to github pages
 git push -u -f origin main

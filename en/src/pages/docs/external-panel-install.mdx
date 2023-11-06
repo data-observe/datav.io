@@ -8,7 +8,7 @@ import Code  from '@/components/docs/Code'
 
 Although xObserve provides a lot of high quality built-in components, the number of built-in components is still limited, especially the data source plug-ins. Therefore, we support third-party plug-ins to give users more choices.
 
-> About how to develop external plugins, please refer to the developer guide: https://github.com/xobserveio/xobserve/wiki#developer-guides
+> About how to develop external plugins, please refer to the developer guide: https://github.com/xobserve/xobserve/wiki#developer-guides
 
 Next, let's install a simple panel plugin: demo, which is actually a simple text component for display some markdown text.
 
@@ -18,12 +18,12 @@ Next, let's install a simple panel plugin: demo, which is actually a simple text
 
 First, we need to download the source code of xObserve. 
 
-If you are going to use xObserve in production evironment, you should choose [release](https://github.com/xobserveio/xobserve/releases) versions, but since this document only demonstrates how to install the plugin, you can download it directly from the `main` branch: https://github.com/xobserveio/xobserve,
+If you are going to use xObserve in production evironment, you should choose [release](https://github.com/xobserve/xobserve/releases) versions, but since this document only demonstrates how to install the plugin, you can download it directly from the `main` branch: https://github.com/xobserve/xobserve,
 
 
 ### Download plugin
 
-Download the plugin source code at https://github.com/xobserveio/panel-plugin-demo and unzip it, 
+Download the plugin source code at https://github.com/xobserve/panel-plugin-demo and unzip it, 
 then copy the `demo` folder to the xObserve source code directory: `/DATAV_ROOT/ui/external-plugins/panel`,
 
 
@@ -47,7 +47,7 @@ then copy the `demo` folder to the xObserve source code directory: `/DATAV_ROOT/
 │   │   ├── candlestick
 ```
 
-You can see that there is a new `demo` plugin directory in the `panel` directory. In addition to the new demo directory we added, there is also a candlestick directory, which is an external plugin provided by xObserve. We will learn how to develop a complex external panel plugin through it in the [developer guide](https://github.com/xobserveio/xobserve/wiki).
+You can see that there is a new `demo` plugin directory in the `panel` directory. In addition to the new demo directory we added, there is also a candlestick directory, which is an external plugin provided by xObserve. We will learn how to develop a complex external panel plugin through it in the [developer guide](https://github.com/xobserve/xobserve/wiki).
 
 ### Install plugins
 
@@ -64,7 +64,7 @@ go run buildPlugins.go
 
 As you can see, the script has been successfully executed, and the prompt `Generate panel plugins file successfully!` indicates that the plugin source code has been installed in the corresponding directory.
 
-For specific installation directories, please refer to the [developer guide](https://github.com/xobserveio/xobserve/wiki/Create-panel-plugin#installed-plugin-files).
+For specific installation directories, please refer to the [developer guide](https://github.com/xobserve/xobserve/wiki/Create-panel-plugin#installed-plugin-files).
 
 
 ### Compie xObserve

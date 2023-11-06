@@ -235,7 +235,7 @@ function TopLevelNav({ mobile }) {
       </TopLevelLink>
       <TopLevelLink
         mobile={mobile}
-        href="https://github.com/xobserveio/xobserve/wiki#developer-guides"
+        href="https://github.com/xobserve/xobserve/wiki#developer-guides"
         className="mb-4"
         shadow="group-hover:shadow-indigo-200 dark:group-hover:bg-indigo-500"
         icon={

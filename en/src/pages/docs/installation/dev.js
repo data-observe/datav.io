@@ -77,7 +77,7 @@ export default function Index({ code }) {
       >
         <h3 className="sr-only">Installing xObserve</h3>
         <p>
-          It's easy to use source code building and running xObserve from scratch. You can download the latest release from <Link href="https://github.com/xobserveio/xobserve/releases">Github</Link>.
+          It's easy to use source code building and running xObserve from scratch. You can download the latest release from <Link href="https://github.com/xobserve/xobserve/releases">Github</Link>.
         </p>
       </div>
       <Steps level={4} steps={steps} code={code} />

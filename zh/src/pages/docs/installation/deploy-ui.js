@@ -113,11 +113,11 @@ export default function Index({ code }) {
                     在本节中，我们将在不同的服务器上部署 UI 静态资源和 API server。
                 </p>
                 <p>
-                事实上 `https://play.xobserve.io` 就是分离部署的：UI 静态文件部署在 <Link href="https://github.com/xobserveio/play.xobserve.io">Github page</Link> 上，API server 部署在云服务器，其中 `play.xobserve.io` 指向 Github page, `api.xobserve.io` 指向 API server。
+                事实上 `https://play.xobserve.io` 就是分离部署的：UI 静态文件部署在 <Link href="https://github.com/xobserve/play.xobserve.io">Github page</Link> 上，API server 部署在云服务器，其中 `play.xobserve.io` 指向 Github page, `api.xobserve.io` 指向 API server。
                     当用户从 `play.xobserve.io` 访问 UI 时，会先从 Github page 上下载静态资源文件，然后这些文件会请求 `api.xobserve.io` 获取数据。
                 </p>
                 <p>
-                    首先，需要从 <Link href="https://github.com/xobserveio/xobserve/releases">Github</Link> 上下载 xObserve 的<strong>源代码( source code)</strong>，注意，不是 zip 安装包。然后准备两台服务器用于部署 xObserve:
+                    首先，需要从 <Link href="https://github.com/xobserve/xobserve/releases">Github</Link> 上下载 xObserve 的<strong>源代码( source code)</strong>，注意，不是 zip 安装包。然后准备两台服务器用于部署 xObserve:
                 </p>
                 <p>1. <strong>10.7.10.10</strong> 上部署 xobserve server 也就是 api server</p>
                 <p>2. <strong>10.7.10.11</strong> 上部署 UI 静态资源( 通过 nginx 提供)</p>

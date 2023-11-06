@@ -76,7 +76,7 @@ export default function Index({ code }) {
       >
         <h3 className="sr-only">Installing xObserve</h3>
         <p>
-          从源码构建和运行 xObserve 非常简单，首先下载 `release` 版本的源码 <Link href="https://github.com/xobserveio/xobserve/releases">Github</Link>.
+          从源码构建和运行 xObserve 非常简单，首先下载 `release` 版本的源码 <Link href="https://github.com/xobserve/xobserve/releases">Github</Link>.
         </p>
       </div>
       <Steps level={4} steps={steps} code={code} />

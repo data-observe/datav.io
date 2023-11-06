@@ -108,7 +108,7 @@ export default function Index({ code }) {
       >
         <h3 className="sr-only">Installing xObserve</h3>
         <p>
-          In this sectionl, we will deploy our UI static files and api server in different hosts.  First, let's download the <strong>`source code`</strong> of xObserve from  <Link href="https://github.com/xobserveio/xobserve/releases">Github</Link>, and prepared two servers for hosting xobserve: 
+          In this sectionl, we will deploy our UI static files and api server in different hosts.  First, let's download the <strong>`source code`</strong> of xObserve from  <Link href="https://github.com/xobserve/xobserve/releases">Github</Link>, and prepared two servers for hosting xobserve: 
         </p>
         <p>1. <strong>10.7.10.10</strong> for hosting xobserve server( api server )</p>
         <p>2. <strong>10.7.10.11</strong> for hosting UI static files ( through nginx )</p>

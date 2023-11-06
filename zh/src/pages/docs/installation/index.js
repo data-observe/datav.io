@@ -46,7 +46,7 @@ export default function Index({ code }) {
       >
         <h3 className="sr-only"></h3>
         <p>
-          xObserve 提供了预编译的二进制文件和 UI 静态资源，大家可以从  <Link href="https://github.com/xobserveio/xobserve/releases">Github</Link> 下载 release 的 zip 包.
+          xObserve 提供了预编译的二进制文件和 UI 静态资源，大家可以从  <Link href="https://github.com/xobserve/xobserve/releases">Github</Link> 下载 release 的 zip 包.
         </p>
         <p>
           对于用户而言，预编译的文件用起来很简单，不过对于开发者而言，还是建议选择构建本地开发环境，一劳永逸。
