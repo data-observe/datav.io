@@ -8,7 +8,7 @@ import Code  from '@/components/docs/Code'
 
 Apache Echarts 是一个免费的、功能强大的图表和可视化库，提供了简单的方式来为你的产品添加直观、交互式和高度可定制的图表。
 
-在 ObserveX 中，为了便于使用,我们已经将 Echarts 的配置项封装成一个函数。
+在 xObserve 中，为了便于使用,我们已经将 Echarts 的配置项封装成一个函数。
 
 <img src={require('@/img/docs/plugin/echarts1.jpg').default.src} alt="echarts1" style={{height: '300px'}} className="rounded-lg ring-1 ring-black/5" />
 
@@ -26,9 +26,9 @@ Apache Echarts 是一个免费的、功能强大的图表和可视化库，提�
 
 // setOptions return echarts.Options, it is directly passed to a echarts chart.
 // Find more options examples: https://echarts.apache.org/examples/en/index.html#chart-type-line
-// data: SeriesData[] which is the standard data format in ObserveX
+// data: SeriesData[] which is the standard data format in xObserve
 // thresholds: ThresholdsConfig[] | null
-// colors: color palettes using in ObserveX
+// colors: color palettes using in xObserve
 // echarts: imported echarts.js module 
 // loadash: imported loadash.js module
 // moment: imported momen.jst module
@@ -143,7 +143,7 @@ function setOptions(data, thresholds, colors, echarts, loadash, moment, colorMod
     <li>2. 返回 Echarts 需要的 options 配置 </li>
 </TextList>
 
-总之， ObserveX:
+总之， xObserve:
 
 1. 从数据源查询 [`SeriesData`](docs/panel-data-transform#how-to-find-the-data-format) 类型的数据，例如 Prometheus.
 2. 将这些数据传入 `setOptions` 函数，
@@ -177,12 +177,12 @@ function registerEvents(options, chart, navigate, setVariable, setDateTime, $var
 }
 ```
 
-不错，ObserveX 已经为我们定义了一个基本的点击事件，让我们试着点击一下图表，看看会发生什么：
+不错，xObserve 已经为我们定义了一个基本的点击事件，让我们试着点击一下图表，看看会发生什么：
 
 <img src={require('@/img/docs/plugin/echarts-interaction-effect.jpg').default.src} alt="echarts-interaction-effect" width={3086} height={1658} className="rounded-lg ring-1 ring-black/5" />
 
 
-如上图所示，我们点击了图表上的一个点，ObserveX 将会在控制台输出点击的点的信息。
+如上图所示，我们点击了图表上的一个点，xObserve 将会在控制台输出点击的点的信息。
 
 
 ## 更多示例
@@ -198,7 +198,7 @@ function registerEvents(options, chart, navigate, setVariable, setDateTime, $var
 
 百度地图比较特殊，你需要做完成一些配置才能使用：
 
-1. 在 `observex.conf` 文件中启用 `Baidu map` SDK
+1. 在 `xobserve.conf` 文件中启用 `Baidu map` SDK
 
 ```yml
 panel:

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export function Title({ suffix = 'ObserveX.io', children }) {
+export function Title({ suffix = 'xObserve.io', children }) {
   let title = children + (suffix ? ` - ${suffix}` : '')
 
   return (
@@ -13,7 +13,7 @@ export function Title({ suffix = 'ObserveX.io', children }) {
   )
 }
 
-export function OgTitle({ suffix = 'ObserveX.io', children }) {
+export function OgTitle({ suffix = 'xObserve.io', children }) {
   let title = children + (suffix ? ` - ${suffix}` : '')
 
   return (

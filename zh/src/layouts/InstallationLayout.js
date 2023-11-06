@@ -84,7 +84,7 @@ let readNext = [
   //   },
   // },
   {
-    title: 'ObserveX 入门教程',
+    title: 'xObserve 入门教程',
     href: '/docs/tutorial',
     icon: {
       className: 'dark:bg-pink-500 dark:highlight-white/30',
@@ -93,7 +93,7 @@ let readNext = [
     },
     body: () => (
       <p>
-        学习如何使用 ObserveX, 在此过程中迅速熟悉 ObserveX 的核心概念和特性。
+        学习如何使用 xObserve, 在此过程中迅速熟悉 xObserve 的核心概念和特性。
       </p>
     )
   },
@@ -110,10 +110,10 @@ export function InstallationLayout({ children }) {
             安装启动
           </p>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
-            安装和启动 ObserveX
+            安装和启动 xObserve
           </h1>
           <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">
-            与 Grafana 不同，ObserveX 的代码非常简洁，依赖较少，因此它的开发环境配置非常简单，而且启动也很迅速。
+            与 Grafana 不同，xObserve 的代码非常简洁，依赖较少，因此它的开发环境配置非常简单，而且启动也很迅速。
           </p>
         </div>
       </header>

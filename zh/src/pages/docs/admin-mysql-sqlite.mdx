@@ -6,20 +6,20 @@ description:
 import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 
-ObserveX 支持两种数据库：`Mysql` 和 `Sqlite`。你可以使用其中任意一种来存储你的数据。
+xObserve 支持两种数据库：`Mysql` 和 `Sqlite`。你可以使用其中任意一种来存储你的数据。
 
-默认情况下，ObserveX 使用 `sqlite` 来存储数据。你可以在 ObserveX 的根目录下找到一个名为 `observex.db` 的文件，该文件就是 sqlite 的数据库存储文件。
+默认情况下，xObserve 使用 `sqlite` 来存储数据。你可以在 xObserve 的根目录下找到一个名为 `xobserve.db` 的文件，该文件就是 sqlite 的数据库存储文件。
 
 <img src={require('@/img/docs/admin/sqlite-file.jpg').default.src} alt="sqlite-file"  className="rounded-lg ring-1 ring-black/5"  style={{height: '100px'}}/>
 
-因此，如果你使用默认的 `sqlite`，请定期备份这个 `observex.db` 文件。
+因此，如果你使用默认的 `sqlite`，请定期备份这个 `xobserve.db` 文件。
 
 ## Sqlite 
 
 使用 `sqlite` 非常简单:
 
 <TextList>
-    <li>如果你没修改过配置，那么 ObserveX 默认就使用 `sqlite` 作为存储</li>
+    <li>如果你没修改过配置，那么 xObserve 默认就使用 `sqlite` 作为存储</li>
     <li>或者按照如下配置来设置使用 `sqlite`</li>
 </TextList>
 
@@ -46,10 +46,10 @@ database:
     account_secret: 
     host: localhost
     port: 3306
-    database: observex
+    database: xobserve
 ```
 
-2. 将 <Code>observex/query</Code> 目录下的 `observex.sql` 导入到 Mysql 中。
+2. 将 <Code>xobserve/query</Code> 目录下的 `xobserve.sql` 导入到 Mysql 中。
 
 
 

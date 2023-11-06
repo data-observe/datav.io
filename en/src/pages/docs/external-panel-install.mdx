@@ -6,25 +6,25 @@ description:
 import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 
-Although ObserveX provides a lot of high quality built-in components, the number of built-in components is still limited, especially the data source plug-ins. Therefore, we support third-party plug-ins to give users more choices.
+Although xObserve provides a lot of high quality built-in components, the number of built-in components is still limited, especially the data source plug-ins. Therefore, we support third-party plug-ins to give users more choices.
 
-> About how to develop external plugins, please refer to the developer guide: https://github.com/observexio/observex/wiki#developer-guides
+> About how to develop external plugins, please refer to the developer guide: https://github.com/xobserveio/xobserve/wiki#developer-guides
 
 Next, let's install a simple panel plugin: demo, which is actually a simple text component for display some markdown text.
 
 ## Install & Compile
 
-### Download the sourcecode of ObserveX
+### Download the sourcecode of xObserve
 
-First, we need to download the source code of ObserveX. 
+First, we need to download the source code of xObserve. 
 
-If you are going to use ObserveX in production evironment, you should choose [release](https://github.com/observexio/observex/releases) versions, but since this document only demonstrates how to install the plugin, you can download it directly from the `main` branch: https://github.com/observexio/observex,
+If you are going to use xObserve in production evironment, you should choose [release](https://github.com/xobserveio/xobserve/releases) versions, but since this document only demonstrates how to install the plugin, you can download it directly from the `main` branch: https://github.com/xobserveio/xobserve,
 
 
 ### Download plugin
 
-Download the plugin source code at https://github.com/observexio/panel-plugin-demo and unzip it, 
-then copy the `demo` folder to the ObserveX source code directory: `/DATAV_ROOT/ui/external-plugins/panel`,
+Download the plugin source code at https://github.com/xobserveio/panel-plugin-demo and unzip it, 
+then copy the `demo` folder to the xObserve source code directory: `/DATAV_ROOT/ui/external-plugins/panel`,
 
 
 ```bash
@@ -47,7 +47,7 @@ then copy the `demo` folder to the ObserveX source code directory: `/DATAV_ROOT/
 │   │   ├── candlestick
 ```
 
-You can see that there is a new `demo` plugin directory in the `panel` directory. In addition to the new demo directory we added, there is also a candlestick directory, which is an external plugin provided by ObserveX. We will learn how to develop a complex external panel plugin through it in the [developer guide](https://github.com/observexio/observex/wiki).
+You can see that there is a new `demo` plugin directory in the `panel` directory. In addition to the new demo directory we added, there is also a candlestick directory, which is an external plugin provided by xObserve. We will learn how to develop a complex external panel plugin through it in the [developer guide](https://github.com/xobserveio/xobserve/wiki).
 
 ### Install plugins
 
@@ -64,53 +64,53 @@ go run buildPlugins.go
 
 As you can see, the script has been successfully executed, and the prompt `Generate panel plugins file successfully!` indicates that the plugin source code has been installed in the corresponding directory.
 
-For specific installation directories, please refer to the [developer guide](https://github.com/observexio/observex/wiki/Create-panel-plugin#installed-plugin-files).
+For specific installation directories, please refer to the [developer guide](https://github.com/xobserveio/xobserve/wiki/Create-panel-plugin#installed-plugin-files).
 
 
-### Compie ObserveX
+### Compie xObserve
 
-Since the source code of the new plugin is already installed to the UI source code, we can recompile ObserveX now to make the new code working.
+Since the source code of the new plugin is already installed to the UI source code, we can recompile xObserve now to make the new code working.
 
-> Note: This document only demonstrates the use of plugins. In actual scenarios, you only need to recompile the UI source code, and then put the compiled static files on the corresponding static file server, such as Nginx or the static file server built in ObserveX. 
+> Note: This document only demonstrates the use of plugins. In actual scenarios, you only need to recompile the UI source code, and then put the compiled static files on the corresponding static file server, such as Nginx or the static file server built in xObserve. 
 
-> In fact, this document uses the static file server built in ObserveX.
+> In fact, this document uses the static file server built in xObserve.
 
-Enter the root directory of ObserveX source code and run `release.sh`:
+Enter the root directory of xObserve source code and run `release.sh`:
 
 ```bash
 ./release.sh 
 ```
 
-This script will compile ObserveX completely, and finally generate the executable files of ObserveX for multiple platforms, as well as the frontend static resource files.
+This script will compile xObserve completely, and finally generate the executable files of xObserve for multiple platforms, as well as the frontend static resource files.
 
 After compilation, you can find a new `release` directory in the root directory, with the following content:
 
 ```bash
-├── observex-darwin-amd64.zip
-├── observex-linux-amd64.zip
-├── observex-windows-amd64.zip
+├── xobserve-darwin-amd64.zip
+├── xobserve-linux-amd64.zip
+├── xobserve-windows-amd64.zip
 ```
 
 ### Unzip the release files
 
-Assuming you are using `macos`, then you only need to unzip `observex-darwin-amd64.zip` in the `release` directory. The directory structure after unzipping is as follows:
+Assuming you are using `macos`, then you only need to unzip `xobserve-darwin-amd64.zip` in the `release` directory. The directory structure after unzipping is as follows:
 
 ```bash 
-├── observex   # executive binary for api server and static file server
-├── observex.sql # the sql file that mysql requires
-├── observex.yaml # api server configurations
+├── xobserve   # executive binary for api server and static file server
+├── xobserve.sql # the sql file that mysql requires
+├── xobserve.yaml # api server configurations
 ├── ui # frontend static resource files
 ```
 
-### Start ObserveX server
+### Start xObserve server
 
-The release structure is very simple and clear. Next, we can start the API server and static resource server of ObserveX. These words sounds very complicated, right? In fact, you only need to:
+The release structure is very simple and clear. Next, we can start the API server and static resource server of xObserve. These words sounds very complicated, right? In fact, you only need to:
 
 ```bash 
-./observex
+./xobserve
 ```
 
-You may be curious, don't you need to start an API server and a static resource server separately? Why is only the API server started? In fact,  `observex` also comes with a built-in static resource server.
+You may be curious, don't you need to start an API server and a static resource server separately? Why is only the API server started? In fact,  `xobserve` also comes with a built-in static resource server.
 
 The most wonderful thing is that the API server and the static resource server share the same port, which is convenient for everyone to use. 
 Of course, you can also put the UI static resources under the Nginx server, which is more suitable for the production environment.
@@ -119,7 +119,7 @@ Of course, you can also put the UI static resources under the Nginx server, whic
 
 ## Use the newly installed plugin
 
-After starting `observex`, open the browser and visit `http://localhost:10086`, create a panel end edit it, you will see the following interface:
+After starting `xobserve`, open the browser and visit `http://localhost:10086`, create a panel end edit it, you will see the following interface:
 
 
 <img src={require('@/img/docs/external-plugins/demo.jpg').default.src} alt="custom-background" width={3086} height={1658} className="rounded-lg ring-1 ring-black/5" />
@@ -128,5 +128,5 @@ After starting `observex`, open the browser and visit `http://localhost:10086`, 
 You can see that the new `demo` plugin has successfully appeared in the panel list. There are two points to note:
 
 - `demo` is placed under `External plugins` tab
-- There is also a `Candlestick` plugin next to `demo`, which is an preinstalled external panel plugin provided by ObserveX. It is very powerful and feature-rich.
+- There is also a `Candlestick` plugin next to `demo`, which is an preinstalled external panel plugin provided by xObserve. It is very powerful and feature-rich.
 

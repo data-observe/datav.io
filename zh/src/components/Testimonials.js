@@ -15,7 +15,7 @@ export let testimonials = [
       url: 'http://im.dev',
       author: {
         name: '孙飞 Sunface',
-        role: 'ObserveX Creator',
+        role: 'xObserve Creator',
         avatar: "https://camo.githubusercontent.com/6530409ed816fdc50a14bcb697837a0a51d9c1c124f75317a94ca90c31537dd9/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d61613634393037383362303066623137333365386235326632663635373634375f786c6c2e6a7067",
       },
     },

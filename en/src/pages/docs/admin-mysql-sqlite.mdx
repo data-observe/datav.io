@@ -6,20 +6,20 @@ description:
 import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 
-ObserveX support two databases at the moment: `Mysql` and `Sqlite`. You can use either of them to store your data.
+xObserve support two databases at the moment: `Mysql` and `Sqlite`. You can use either of them to store your data.
 
-By default, ObserveX uses `sqlite` to store data. You can find a file named `observex.db` in the root directory of ObserveX. This file is the database store file of sqlite.
+By default, xObserve uses `sqlite` to store data. You can find a file named `xobserve.db` in the root directory of xObserve. This file is the database store file of sqlite.
 
 <img src={require('@/img/docs/admin/sqlite-file.jpg').default.src} alt="sqlite-file"  className="rounded-lg ring-1 ring-black/5"  style={{height: '100px'}}/>
 
-Therefore, if you use default `sqlite`, please backup this `observex.db` file regularly.
+Therefore, if you use default `sqlite`, please backup this `xobserve.db` file regularly.
 
 ## Sqlite 
 
 Using `sqlite` is very easy:
 
 <TextList>
-    <li>ObserveX will use `sqlite` as the default database if you have not configured the database.</li>
+    <li>xObserve will use `sqlite` as the default database if you have not configured the database.</li>
     <li> Modify `config.yml` to use `sqlite`</li>
 </TextList>
 
@@ -31,7 +31,7 @@ database:
 
 ## Mysql 
 
-Using mysql means you can deploy multipe ObserveX instances and share the same database. So we recommend you to use mysql in production environment.
+Using mysql means you can deploy multipe xObserve instances and share the same database. So we recommend you to use mysql in production environment.
 
 1. Configure mysql in `config.yml`
 
@@ -42,10 +42,10 @@ database:
     account_secret: 
     host: localhost
     port: 3306
-    database: observex
+    database: xobserve
 ```
 
-2. Import the `observex.sql` file in the <Code>observex/query</Code> directory into mysql.
+2. Import the `xobserve.sql` file in the <Code>xobserve/query</Code> directory into mysql.
 
 
 

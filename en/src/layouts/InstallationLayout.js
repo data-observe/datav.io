@@ -83,7 +83,7 @@ let readNext = [
   //   },
   // },
   {
-    title: 'ObserveX Tutorials',
+    title: 'xObserve Tutorials',
     href: '/docs/tutorial',
     icon: {
       className: 'dark:bg-pink-500 dark:highlight-white/30',
@@ -92,7 +92,7 @@ let readNext = [
     },
     body: () => (
       <p>
-        Learn the tutorial and get familiar with ObserveX's core concepts and features.
+        Learn the tutorial and get familiar with xObserve's core concepts and features.
       </p>
     )
   },
@@ -109,10 +109,10 @@ export function InstallationLayout({ children }) {
             First steps
           </p>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
-            Installation and Start observex
+            Installation and Start xobserve
           </h1>
           <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">
-            Benifit of having a clean codebase, ObserveX's installation is very simple, especially for Developers !
+            Benifit of having a clean codebase, xObserve's installation is very simple, especially for Developers !
           </p>
         </div>
       </header>

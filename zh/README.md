@@ -1,3 +1,3 @@
-# zh.observex.io
+# zh.xobserve.io
 
 Website for Chinese developers.

@@ -6,14 +6,14 @@ import Code  from '@/components/docs/Code'
 
 let steps = [
   {
-    title: 'Configure listening address for observex server( optional )',
+    title: 'Configure listening address for xobserve server( optional )',
     body: () => (
       <p>
-        Now, we need to configure a listening address for our ObserveX api server and static file server of UI. The default address is `localhost:10086`
+        Now, we need to configure a listening address for our xObserve api server and static file server of UI. The default address is `localhost:10086`
       </p>
     ),
     code: {
-      name: 'ObserveXRoot/observex.yaml',
+      name: 'xObserveRoot/xobserve.yaml',
       lang: 'yaml',
       code: `server:
   ## api server listening address
@@ -22,17 +22,17 @@ let steps = [
     },
   },
   {
-    title: 'Start ObserveX',
+    title: 'Start xObserve',
     body: () => (
       <p>
-        Enter the root directory of ObserveX and run the following command to start ObserveX server.
+        Enter the root directory of xObserve and run the following command to start xObserve server.
       </p>
     ),
     code: {
-      name: 'ObserveXRoot/',
+      name: 'xObserveRoot/',
       lang: 'terminal',
-      code: `./observex
-INFO[08-22|13:40:25] ObserveX is ready and listening on address=localhost:10086`,
+      code: `./xobserve
+INFO[08-22|13:40:25] xObserve is ready and listening on address=localhost:10086`,
     },
   }
 ]
@@ -46,10 +46,10 @@ export default function Index({ code }) {
       >
         <h3 className="sr-only"></h3>
         <p>
-          ObserveX provides pre-built binary and UI static files for every release, you can download them in  <Link href="https://github.com/observexio/observex/releases">Github</Link>.
+          xObserve provides pre-built binary and UI static files for every release, you can download them in  <Link href="https://github.com/xobserveio/xobserve/releases">Github</Link>.
         </p>
         <p>
-          Pre-built binary files are very convenient for users to use, but they are not suitable for developers to develop and debug. If you want to develop ObserveX, you need to build the source code yourself.
+          Pre-built binary files are very convenient for users to use, but they are not suitable for developers to develop and debug. If you want to develop xObserve, you need to build the source code yourself.
         </p>
       </div>
 
@@ -57,26 +57,26 @@ export default function Index({ code }) {
 
       <div>
         <h2 className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
-          Try ObserveX in browser
+          Try xObserve in browser
         </h2>
-        <p>That's it, all we need to do is configuring a listening address  and start `ObserveX`, it's super easy. Now you can open Chrome or Safari browser and visit <Code><Link href="http://localhost:10086">http://localhost:10086</Link></Code> to explore ObserveX UI.</p>
+        <p>That's it, all we need to do is configuring a listening address  and start `xObserve`, it's super easy. Now you can open Chrome or Safari browser and visit <Code><Link href="http://localhost:10086">http://localhost:10086</Link></Code> to explore xObserve UI.</p>
       </div>
 
       <div className="mt-8">
         <h2 className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
           Why not require nginx or vite dev server?
         </h2>
-        <p>This is because we have a built-in static file server in ObserveX, and the UI static files you access are provided by this file server. Another important thing is that the API server and file server shares the same address `localhost:10086`, it's very convinient for deploying.</p>
+        <p>This is because we have a built-in static file server in xObserve, and the UI static files you access are provided by this file server. Another important thing is that the API server and file server shares the same address `localhost:10086`, it's very convinient for deploying.</p>
       </div>
       <div className="mt-8">
         <h2 className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
           What if I want to points a domain name to UI and api server?
         </h2>
-        <p>If your boss want to access ObserveX when he is not in company, then you should assign an externap ip or domain name to observex, such as `https://myobservex.io`. In this case, you should override the api server address for UI: </p>
+        <p>If your boss want to access xObserve when he is not in company, then you should assign an externap ip or domain name to xobserve, such as `https://myxobserve.io`. In this case, you should override the api server address for UI: </p>
         
-        <p className="mt-4">Modify `observex.yaml`, set field `override_api_server_addr_for_ui` to `https://myobservex.io`</p>
+        <p className="mt-4">Modify `xobserve.yaml`, set field `override_api_server_addr_for_ui` to `https://myxobserve.io`</p>
 
-        <p className="mt-4">Now your api server and UI are both served at `https://myobservex.io`</p>
+        <p className="mt-4">Now your api server and UI are both served at `https://myxobserve.io`</p>
 
         <p className="mt-4"><strong>This is not bad, but a much better way is to separate UI static files and api server as below.</strong></p>
       </div>

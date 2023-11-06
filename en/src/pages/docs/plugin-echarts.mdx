@@ -8,7 +8,7 @@ import Code  from '@/components/docs/Code'
 
 Apache ECharts is a free, powerful charting and visualization library offering easy ways to add intuitive, interactive, and highly customizable charts to your products。
 
-In observex we have wrapped echarts options in a function, so you should feel not hard to use echarts.
+In xobserve we have wrapped echarts options in a function, so you should feel not hard to use echarts.
 
 <img src={require('@/img/docs/plugin/echarts1.jpg').default.src} alt="echarts1"   width={3086} height={1658}  className="rounded-lg ring-1 ring-black/5" />
 
@@ -24,9 +24,9 @@ Click `Edit function` and fill in the following code:
 
 // setOptions return echarts.Options, it is directly passed to a echarts chart.
 // Find more options examples: https://echarts.apache.org/examples/en/index.html#chart-type-line
-// data: SeriesData[] which is the standard data format in ObserveX
+// data: SeriesData[] which is the standard data format in xObserve
 // thresholds: ThresholdsConfig[] | null
-// colors: color palettes using in ObserveX
+// colors: color palettes using in xObserve
 // echarts: imported echarts.js module 
 // loadash: imported loadash.js module
 // moment: imported momen.jst module
@@ -141,7 +141,7 @@ In above code, we have done these things:
     <li>2. Return the options that will pass to Echarts instance. </li>
 </TextList>
 
-In a word, ObserveX:
+In a word, xObserve:
 1. Query data of [`SeriesData`](docs/panel-data-transform#how-to-find-the-data-format) type from datasource, such as Prometheus.
 2. This data is passed into `setOptions` function,
 3. The function transform `SeriesData` to the format that Echarts needs
@@ -172,7 +172,7 @@ function registerEvents(options, chart, navigate, setVariable, setDateTime, $var
 }
 ```
 
-Oh, nice, ObserveX already define a basic click event for us, let's try to click che chart and see what will happen.
+Oh, nice, xObserve already define a basic click event for us, let's try to click che chart and see what will happen.
 
 <img src={require('@/img/docs/plugin/echarts-map.jpg').default.src} alt="echarts-map" width={3086} height={1658} className="rounded-lg ring-1 ring-black/5" />
 
@@ -191,7 +191,7 @@ Here are more examples for Echarts.
 
 Baidu map is a special plugin for Echarts, so you need to do some configuration to use it:
 
-1. Enable `Baidu map` sdk in `observex.conf` file 
+1. Enable `Baidu map` sdk in `xobserve.conf` file 
 
 ```yml
 panel:
@@ -205,6 +205,6 @@ panel:
 
 {/* ### Shanghai index 
 
-<img src="https://github.com/observexio/assets/blob/main/plugin/shanghai-index.jpg?raw=true"/>
+<img src="https://github.com/xobserveio/assets/blob/main/plugin/shanghai-index.jpg?raw=true"/>
 
 [source code](https://gist.github.com/sunface/e92b6fedfa51407b599c377cc1d2a4c3#file-shanghai-index-js) */}

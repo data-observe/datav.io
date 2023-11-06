@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 GeoMap 插件可以在地图的指定位置上渲染相应的数据点，例如根据国家编码、城市名以及坐标来渲染。
 
-> 具体的国家编码、城市名，可以在[这里](https://github.com/observexio/observex/tree/main/ui/public/plugins/panel/geomap)查阅
+> 具体的国家编码、城市名，可以在[这里](https://github.com/xobserveio/xobserve/tree/main/ui/public/plugins/panel/geomap)查阅
 
 ## 在世界地图上渲染国家和城市
 
@@ -173,12 +173,12 @@ function onClick(data, map, navigate, setVariable, setDateTime, $variables) {
 而前者仅仅是一个 `name` 索引。总之，三个点分别代表了三种坐标索引类型：
 
 <TextList>
-    <li> 国家编码 `US`，坐标索引定义在 <Link href="https://github.com/observexio/observex/blob/main/ui/public/plugins/panel/geomap/countries.json">countries.json</Link> </li>
-    <li> 城市名称 `Shanghai`, 坐标索引定义在 <Link href="https://github.com/observexio/observex/blob/main/ui/public/plugins/panel/geomap/cities.json">cities.json</Link></li>
+    <li> 国家编码 `US`，坐标索引定义在 <Link href="https://github.com/xobserveio/xobserve/blob/main/ui/public/plugins/panel/geomap/countries.json">countries.json</Link> </li>
+    <li> 城市名称 `Shanghai`, 坐标索引定义在 <Link href="https://github.com/xobserveio/xobserve/blob/main/ui/public/plugins/panel/geomap/cities.json">cities.json</Link></li>
     <li> 通过 <Code>"type":"geo"</Code>类型的字段传递的具体坐标</li>
 </TextList>
 
-ObserveX 在通过索引查询坐标时，具体的顺序是：先通过国家编码查询，如果没有找到则通过城市名称查询，如果还是没有找到则通过坐标查询。
+xObserve 在通过索引查询坐标时，具体的顺序是：先通过国家编码查询，如果没有找到则通过城市名称查询，如果还是没有找到则通过坐标查询。
 
 事实上， 数据点的`Time` 字段是从未被使用的，它仅仅是因为 `Geomap` 的数据格式和 `Graph` 以及 `Table` 的数据格式是一样的，都是 `SeriesData` 格式。
 

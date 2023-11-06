@@ -64,7 +64,7 @@ import Code  from '@/components/docs/Code'
 
 ### 变量格式
 
-你可能已经注意到查询语句中的 `${job}`，它是我们使用一个变量的标准格式，在语句执行之前，ObserveX 会将语句中的变量格式替换为变量当前选择的值。
+你可能已经注意到查询语句中的 `${job}`，它是我们使用一个变量的标准格式，在语句执行之前，xObserve 会将语句中的变量格式替换为变量当前选择的值。
 
 你可以在一条语句中使用多个变量，例如: <Code>{'go_gc_duration_seconds{job="${job}", instance="${instance}"}'}</Code>.
 

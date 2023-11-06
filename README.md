@@ -1,3 +1,3 @@
-# ObserveX website 
+# xObserve website 
 
-Website source code and docs for observex.io.
+Website source code and docs for xobserve.io.

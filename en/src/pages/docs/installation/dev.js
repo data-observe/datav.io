@@ -13,14 +13,14 @@ let steps = [
           Server is written in Go, so you need to install <Link href="https://go.dev/dl/">Go environments</Link> first.
         </p>
         <p>
-          Then running command on the right in `ObserveXRoot/query` dir.
+          Then running command on the right in `xObserveRoot/query` dir.
         </p>
       </>
     ),
     code: {
-      name: 'ObserveXRoot/query',
+      name: 'xObserveRoot/query',
       lang: 'terminal',
-      code: `go build -o observex`,
+      code: `go build -o xobserve`,
     },
   },
   {
@@ -28,7 +28,7 @@ let steps = [
     body: () => (
       <>
         <p>
-          Still in `ObserveXRoot/query` dir, executing the binary file compiled in the previous step.
+          Still in `xObserveRoot/query` dir, executing the binary file compiled in the previous step.
         </p>
         <p>
           Finally, you can see the following output, which means that the server has started successfully.
@@ -36,17 +36,17 @@ let steps = [
       </>
     ),
     code: {
-      name: 'ObserveXRoot/query',
+      name: 'xObserveRoot/query',
       lang: 'terminal',
-      code: `./observex --config observex.yaml
-INFO[08-22|13:40:25] ObserveX is listening on address            address=:10086`,
+      code: `./xobserve --config xobserve.yaml
+INFO[08-22|13:40:25] xObserve is listening on address            address=:10086`,
     },
   },
   {
     title: 'Build frontend UI',
     body: () => (
       <p>
-        Open another terminal and go to `ObserveXRoot/ui` dir, then run the following command to install the dependencies.
+        Open another terminal and go to `xObserveRoot/ui` dir, then run the following command to install the dependencies.
       </p>
     ),
     code: {
@@ -75,18 +75,18 @@ export default function Index({ code }) {
         id="content-wrapper"
         className="relative z-10 max-w-3xl mb-16 prose prose-slate dark:prose-dark"
       >
-        <h3 className="sr-only">Installing ObserveX</h3>
+        <h3 className="sr-only">Installing xObserve</h3>
         <p>
-          It's easy to use source code building and running ObserveX from scratch. You can download the latest release from <Link href="https://github.com/observexio/observex/releases">Github</Link>.
+          It's easy to use source code building and running xObserve from scratch. You can download the latest release from <Link href="https://github.com/xobserveio/xobserve/releases">Github</Link>.
         </p>
       </div>
       <Steps level={4} steps={steps} code={code} />
       
       <div>
       <h2 className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
-          Try ObserveX in browser
+          Try xObserve in browser
         </h2>
-        <p>It's really easy and fast, right? Now you can open Chrome or Safari browser and visit <Code><Link href="http://localhost:5173">http://localhost:5173</Link></Code> to explore ObserveX UI.</p>
+        <p>It's really easy and fast, right? Now you can open Chrome or Safari browser and visit <Code><Link href="http://localhost:5173">http://localhost:5173</Link></Code> to explore xObserve UI.</p>
       </div>
       {/*
         <Cta

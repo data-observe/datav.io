@@ -6,11 +6,11 @@ description:
 import TextList  from '@/components/docs/TextList'
 import Code  from '@/components/docs/Code'
 
-ObserveX 没有提供告警配置的功能，因为我们认为：专业的事情交给专业的人做。
+xObserve 没有提供告警配置的功能，因为我们认为：专业的事情交给专业的人做。
 
 如果你使用的是 Prometheus，你可以在 Prometheus 中配置告警规则，如果你使用的是其他 APM 服务，你也可以在这些服务中配置告警规则。
 
-ObserveX 主要负责告警展示：
+xObserve 主要负责告警展示：
 
 <TextList>
     <li>在告警页面或者告警图表中查看告警</li>
@@ -21,7 +21,7 @@ ObserveX 主要负责告警展示：
 
 ## 告警仪表盘
 
-在 ObserveX 中有两个特殊的仪表盘，它们都拥有自己特殊的 id:
+在 xObserve 中有两个特殊的仪表盘，它们都拥有自己特殊的 id:
 
 <TextList>
     <li>Home 仪表盘:  `d-home`</li>
@@ -32,11 +32,11 @@ ObserveX 主要负责告警展示：
 
 特别的，Alert 仪表盘还有一个预定义的 url 路径: <Code>/alert</Code>。你可以点击侧边导航栏中的告警图标，或者直接访问 <Code>http://localhost:5173/alert</Code> 来访问告警仪表盘。
 
-假设你已经访问了告警页面，那么你应该会看到一堆告警。 你可能会想：为什么这里有这么多告警？我并没有在 ObserveX 中创建告警。答案很简单：这些告警都来自 TestData 数据源。
+假设你已经访问了告警页面，那么你应该会看到一堆告警。 你可能会想：为什么这里有这么多告警？我并没有在 xObserve 中创建告警。答案很简单：这些告警都来自 TestData 数据源。
 
 ### 在 Prometheus 中添加告警规则
 
-对于想看到告警长啥样，`TestData` 很有用，如果你想要展示真实的告警，它直等于没用。由于 Prometheus 是 ObserveX 的核心数据源，所以我们将使用它来展示如何在 ObserveX 中添加告警。
+对于想看到告警长啥样，`TestData` 很有用，如果你想要展示真实的告警，它直等于没用。由于 Prometheus 是 xObserve 的核心数据源，所以我们将使用它来展示如何在 xObserve 中添加告警。
 
 首先，让我们在 Prometheus 中创建一些告警规则。
 
@@ -75,9 +75,9 @@ groups:
 
 但是话说回来，我们想要的不就是这样一个必定触发告警的规则吗？不然你如何快速观察到告警数据 ：)
 
-总之，在配置后，重新启动 Prometheus 服务器，然后回到我们的 ObserveX UI。
+总之，在配置后，重新启动 Prometheus 服务器，然后回到我们的 xObserve UI。
 
-> 获取更多关于告警配置的信息，请访问 [Prometheus 官网](https://prometheus.io/docs/alerting/latest/overview/)。还是那句话， ObserveX 并不依赖于 Prometheus, 我们只是查询数据。 
+> 获取更多关于告警配置的信息，请访问 [Prometheus 官网](https://prometheus.io/docs/alerting/latest/overview/)。还是那句话， xObserve 并不依赖于 Prometheus, 我们只是查询数据。 
 > 至于告警的配置和发送，这都是 Prometheus 完成的。
 
 ### 从 Prometheus 查询告警
@@ -107,9 +107,9 @@ groups:
 
 
 
-可以看到，告警规则的定义与 Prometheus 中的定义完全一致，因为 ObserveX 原生支持 Prometheus 的告警规则展示，而无需任何转换。
+可以看到，告警规则的定义与 Prometheus 中的定义完全一致，因为 xObserve 原生支持 Prometheus 的告警规则展示，而无需任何转换。
 
-> 如果你通过 HTTP API 加载其它系统的告警列表，那么你需要将其转换为 ObserveX 的告警格式，然后才能展示出来
+> 如果你通过 HTTP API 加载其它系统的告警列表，那么你需要将其转换为 xObserve 的告警格式，然后才能展示出来
 
 
 ### 何时使用

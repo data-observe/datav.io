@@ -70,12 +70,12 @@ export default function App({ Component, pageProps, router }) {
       {meta.ogDescription && <OgDescription>{meta.ogDescription}</OgDescription>}
       <Head>
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-        <meta key="twitter:site" name="twitter:site" content="@observex.io" />
-        <meta key="twitter:creator" name="twitter:creator" content="@observex.io" />
+        <meta key="twitter:site" name="twitter:site" content="@xobserve.io" />
+        <meta key="twitter:creator" name="twitter:creator" content="@xobserve.io" />
         <meta
           key="og:url"
           property="og:url"
-          content={`https://observex.io`}
+          content={`https://xobserve.io`}
         />
         <meta key="og:type" property="og:type" content="article" />
         <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feeds/feed.xml" />

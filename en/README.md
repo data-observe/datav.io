@@ -1,3 +1,3 @@
-# observex.io
+# xobserve.io
 
-Website for ObserveX
+Website for xObserve
